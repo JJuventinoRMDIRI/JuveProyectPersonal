@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const HeaderComp = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">Mi Página</Link>
+        <NavLink className="navbar-brand fw-bold" to="/">Mi Página</NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,15 +19,20 @@ const HeaderComp = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
+
             <li className="nav-item">
-              <Link className="nav-link" to="/About-Me">Acerca de Mi</Link>
+              <NavLink className="nav-link" activeClassName="active" to="/Professional-Experience">Experiencia profesional</NavLink>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link" to="/Professional-Experience">Experiencia profesional</Link>
+              <NavLink className="nav-link" activeClassName="active" to="/Education-Profile">Perfil educativo</NavLink>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link" to="/Education-Profile">Perfil educativo</Link>
+              <NavLink className="nav-link" activeClassName="active" to="/About-Me">Acerca de Mi</NavLink>
             </li>
+
+
           </ul>
         </div>
       </div>

@@ -24,11 +24,24 @@ const AboutMe = () => {
             title: "Animal favorito",
             description: "Gato."
         }
-    ]
+    ];
+
+    const backgroundstyles = {
+        // backgroundImage: `url(${bgProfessional})`,
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        maxWidth: "100vw",
+        paddingTop: "60px",
+    };
 
     return (
-        <div className='container mt-4'>
-            <h1>Acerca de mi</h1>
+        <div style={backgroundstyles}>
+            <div className="text-center pt-4 pb-4">
+                <h1 className="fs-1">Acerca de mi</h1>
+            </div>
             <CarrouselCaptions
                 slides={datos}
             />
