@@ -4,19 +4,34 @@ const CardSimples = (props) => {
   const {
     imgSrc,
     imgAlt = "1",
-    cardTitle = "titulo",
-    cardText = "texto",
-    buttonText = "texto boton",
+    imgStyle,
+    cartTitleHeader = "Titulo Header",
+    cardTitle = "Titulo",
+    cardText = "Texto",
+    buttonText = "Texto boton",
     buttonUrl,
   } = props;
 
   return (
-    <div class="card" style={{width: '18rem', marginBottom: 20}}>
-      <img src={imgSrc} class="card-img-top" alt={imgAlt} />
-      <div class="card-body">
-        <h5 class="card-title">{cardTitle}</h5>
-        <p class="card-text">{cardText}</p>
-        {buttonUrl && <a href={buttonUrl} class="btn btn-primary">
+    <div className="card">
+      <div className="card-body">
+        <h3 className="card-title text-center">{cartTitleHeader}</h3>
+      </div>
+      <div className="d-flex justify-content-center align-items-center pt-4">
+        <img
+          src={imgSrc}
+          style={{ width: "300px", borderRadius: 30 , ...imgStyle}}
+          className="card-img-top shadow-lg"
+          alt={imgAlt}
+        />
+      </div>
+      <div className="card-body">
+        <h5 className="card-title">{cardTitle}</h5>
+        <p className="card-text">{cardText}</p>
+        {buttonUrl && <a
+          href={buttonUrl}
+          className="btn btn-primary d-flex justify-content-center"
+        >
           {buttonText}
         </a>}
       </div>

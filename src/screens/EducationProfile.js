@@ -25,88 +25,38 @@ const EducationProfile = () => {
       </div>
 
       <div className="card-group p-5">
-        <div className="card">
-          <div className="card-body">
-            <h3 className="card-title text-center">Universidad</h3>
-          </div>
-          <div className="d-flex justify-content-center align-items-center pt-4">
-            <img
-              src={upiicsaImg}
-              style={{ width: "300px", borderRadius: 30 }}
-              className="card-img-top shadow-lg"
-              alt="upiicsa"
-            />
-          </div>
-          <div className="card-body">
-            <h5 className="card-title">
-              Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias
-              Sociales y Administrativas
-            </h5>
-            <p className="card-text">Me gradue como ingeniero Informatico.</p>
-            <a
-              href={"https://www.upiicsa.ipn.mx/"}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {"Visita la upiicsa"}
-            </a>
-          </div>
-        </div>
+        <CardSimples
+          imgSrc={upiicsaImg}
+          imgAlt={"upiicsa"}
+          cartTitleHeader={"Universidad"}
+          cardTitle={"Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas"}
+          cardText={"Me gradue como ingeniero Informatico."}
+          buttonUrl={"https://www.upiicsa.ipn.mx/"}
+          buttonText={"Visita la upiicsa"}
+        />
 
-        <div className="card">
-          <div className="card-body">
-            <h3 className="card-title text-center">Preparatoria</h3>
-          </div>
-          <div className="d-flex justify-content-center align-items-center pt-4 ">
-            <img
-              src={ceb}
-              style={{ width: "400px", borderRadius: 30 }}
-              className="card-img-top shadow-lg"
-              alt="upiicsa"
-            />
-          </div>
-          <div className="card-body">
-            <h5 className="card-title">
-              Centro de Estudios de Bachillerato 4/1 MTRO. MOISÉS SÁENZ GARZA
-            </h5>
-            <p className="card-text">
-              Estudie la especializacion de informatica.
-            </p>
-            <a
-              href={"https://www.ceb41.com/"}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {"Visita la CEB 4/1"}
-            </a>
-          </div>
-        </div>
+        <CardSimples
+          imgSrc={ceb}
+          imgAlt={"ceb41"}
+          imgStyle={{ width: "400px" }}
+          cartTitleHeader={"Preparatoria"}
+          cardTitle={"Centro de Estudios de Bachillerato 4/1 MTRO. MOISÉS SÁENZ GARZA"}
+          cardText={"Estudie la especializacion de informatica."}
+          buttonUrl={"https://www.ceb41.com/"}
+          buttonText={"Visita la CEB 4/1"}
+        />
 
-        <div className="card">
-        <div className="card-body">
-            <h3 className="card-title text-center">Secundaria</h3>
-          </div>
-          <div className="d-flex justify-content-center align-items-center pt-4 ">
-            <img
-              src={secImg}
-              style={{ width: "400px", borderRadius: 30 }}
-              className="card-img-top shadow-lg"
-              alt="upiicsa"
-            />
-          </div>
-          <div className="card-body">
-            <h5 className="card-title">
-              Escuela Secundaria Diurna N°45 Maria Enriqueta Camarillo
-            </h5>
-            <p className="card-text">
-              Estudie la especializacion de informatica.
-            </p>
-            <a
-              href={"https://informativosec45tm.wixsite.com/secundaria45"}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {"Visita la secundaria N°45"}
-            </a>
-          </div>
-        </div>
+        <CardSimples
+          imgSrc={secImg}
+          imgAlt={"sec45"}
+          imgStyle={{ width: "400px" }}
+          cartTitleHeader={"Secundaria"}
+          cardTitle={"Escuela Secundaria Diurna N°45 Maria Enriqueta Camarillo"}
+          cardText={"Escuela secundaria que me ayudo a definir mi rama e intereses de estudio."}
+          buttonUrl={"https://informativosec45tm.wixsite.com/secundaria45"}
+          buttonText={"Visita la secundaria N°45"}
+        />
+
       </div>
     </div>
   );
