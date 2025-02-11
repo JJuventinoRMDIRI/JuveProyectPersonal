@@ -28,7 +28,7 @@ const CardHorizontal = (props) => {
                 <div className="col-md-4 d-flex justify-content-center align-items-center rounded-end">
                     <img src={imgSrc} style={{ minHeight: '420px', ...imgStyle }} className={`img-fluid rounded-start ${imgClassName}`} alt={imgAltName} />
                 </div>
-                {direction === "right" && <div className="col-md-8">
+                {(direction === "right" || direction === null) && <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{cardTitle}</h5>
                         <p className="card-text">{cardText}</p>

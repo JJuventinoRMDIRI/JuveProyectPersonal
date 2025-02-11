@@ -20,12 +20,32 @@ const IntroductionHome = () => {
 
   const fullText = `Bienvenidos a mi página web, Soy Desarrollador Jr. Front-End APP en React Native, apasionado por crear soluciones digitales de alta calidad. Cuento con experiencia supervisando, corrigiendo errores y mejorando aplicaciones móviles, priorizando en mejorar el rendimiento y experiencia de usuario. He colaborado en la implementación de nuevas funcionalidades y mejoras clave, aplicando mis habilidades técnicas y de trabajo para lograr proyectos a su máximo potencial. Busco seguir creciendo en un entorno profesional junto a expertos del sector, para seguir impulsando la innovación en el desarrollo de aplicaciones móviles.`;
 
+  const cards = [
+    {
+      img: workExperience,
+      title: "Experiencia profesional",
+      text: "Conoce acerca de mi perfil profesional, desde donde comence, hasta donde e llegado.",
+      link: "/Professional-Experience",
+    },
+    {
+      img: educationImgProfile,
+      title: "Perfil Educativo",
+      text: "Conoce mi trayectoria academica.",
+      link: "/Education-Profile",
+    },
+    {
+      img: aboutME,
+      title: "Acerca de mi",
+      text: "Explora acerca de mis gustos, pasatiempos, intereses, etc.",
+      link: "/About-Me",
+    },
+  ];
   return (
     <div style={backgroundstyles}>
       <div className="row featurette d-flex align-items-center justify-content-center text-center mt-5">
         <div className="col-md-7">
           <h2 className="featurette-heading fw-normal lh-1 fs-1">
-            Javier Juventino 
+            Javier Juventino
             <span className="text-secondary "> Ramos Maldonado</span>
           </h2>
           <TypingText
@@ -44,7 +64,7 @@ const IntroductionHome = () => {
         </div>
       </div>
 
-      <div className="row mt-5 p-5">
+      {/* <div className="row mt-5 p-5">
         <CardOverlay
           imgSrc={workExperience}
           cardTitle={"Experiencia profesional"}
@@ -67,6 +87,17 @@ const IntroductionHome = () => {
           }
           link={"/About-Me"}
         />
+      </div> */}
+      <div className="row mt-5 p-5">
+        {cards.map((item, index) => (
+          <CardOverlay
+            key={index}
+            imgSrc={item.img}
+            cardTitle={item.title}
+            cardText1={item.text}
+            link={item.link}
+          />
+        ))}
       </div>
     </div>
   );
