@@ -64,30 +64,6 @@ const IntroductionHome = () => {
         </div>
       </div>
 
-      {/* <div className="row mt-5 p-5">
-        <CardOverlay
-          imgSrc={workExperience}
-          cardTitle={"Experiencia profesional"}
-          cardText1={
-            "Conoce acerca de mi perfil profesional, desde donde comence, hasta donde e llegado."
-          }
-          link={"/Professional-Experience"}
-        />
-        <CardOverlay
-          imgSrc={educationImgProfile}
-          cardTitle={"Perfil Educativo"}
-          cardText1={"Conoce mi trayectoria academica."}
-          link={"/Education-Profile"}
-        />
-        <CardOverlay
-          imgSrc={aboutME}
-          cardTitle={"Acerca de mi"}
-          cardText1={
-            "Explora acerca de mis gustos, pasatiempos, intereses, etc."
-          }
-          link={"/About-Me"}
-        />
-      </div> */}
       <div className="row mt-5 p-5">
         {cards.map((item, index) => (
           <CardOverlay
