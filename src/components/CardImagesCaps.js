@@ -10,13 +10,13 @@ const CardImagesCaps = (props) => {
   } = props;
 
   return (
-    <div className="card mb-3">
-      <img src={imgSrc} className="card-img-top" alt={imgAlt} />
-      <div className="card-body">
-        <h5 className="card-title">{cardTitle}</h5>
-        <p className="card-text">{cardText}</p>
-        <p className="card-text">
-          <small className="text-body-secondary">{cardTextSupressed}</small>
+    <div class="card mb-3">
+      <img src={imgSrc} class="card-img-top" alt={imgAlt} />
+      <div class="card-body">
+        <h5 class="card-title">{cardTitle}</h5>
+        <p class="card-text">{cardText}</p>
+        <p class="card-text">
+          <small class="text-body-secondary">{cardTextSupressed}</small>
         </p>
       </div>
     </div>

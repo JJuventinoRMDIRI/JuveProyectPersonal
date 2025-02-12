@@ -4,6 +4,7 @@ import upiicsaImg from "../img/UPIICSAX.jpg";
 import ceb from "../img/CEB41.JPG";
 import secImg from "../img/sec45.png";
 import bgEducation from "../img/graduation-02.jpg";
+import AlertBadge from "../components/AlertBadge";
 
 const EducationProfile = () => {
   const backgroundstyles = {
@@ -53,26 +54,33 @@ const EducationProfile = () => {
 
   return (
     <div style={backgroundstyles}>
-      <div className="text-center pt-5">
-        <h1 className="fs-1">Perfil academico</h1>
-        <p className="fs-4">A continuacion presento mi trayectoria academica</p>
+      <div class="text-center pt-5">
+        <h1 class="fs-1">Perfil academico</h1>
+        <p class="fs-4">A continuacion presento mi trayectoria academica</p>
       </div>
 
-      <div className="card-group p-5">
-        {cardSimpleInfo.map((item, index) => (
-          <CardSimples
-            key={index}
-            imgSrc={item.img}
-            imgAlt={item.imgAlt}
-            imgStyle={item.imgStyle ? item.imgStyle : null}
-            cartTitleHeader={item.titleHeader}
-            cardTitle={item.title}
-            cardText={item.text}
-            buttonUrl={item.btnUrl}
-            buttonText={item.btnText}
-          />
-        ))}
-      </div>
+      {cardSimpleInfo.length === 0 ? (
+        console.log("Hubo un al obtener los datos de Educacion"),
+        
+          <AlertBadge/>
+        
+      ) : (
+        <div class="card-group p-5">
+          {cardSimpleInfo.map((item, index) => (
+            <CardSimples
+              key={index}
+              imgSrc={item.img}
+              imgAlt={item.imgAlt}
+              imgStyle={item.imgStyle ? item.imgStyle : null}
+              cartTitleHeader={item.titleHeader}
+              cardTitle={item.title}
+              cardText={item.text}
+              buttonUrl={item.btnUrl}
+              buttonText={item.btnText}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -9,8 +9,8 @@ const CarrouselCaptions = (props) => {
     } = props;
 
     return (
-        <div id={id} className="carousel slide" data-bs-side="carousel">
-            <div className="carousel-indicators">
+        <div id={id} class="carousel slide" data-bs-side="carousel">
+            <div class="carousel-indicators">
                 {slides.map((slide, index) => (
                     //aqui recorremos la informacion de un arreglo de objetos que traen la informacion
                     //  de cada diapositiva, con el fin de generar un boton por cada diapositiva
@@ -24,7 +24,7 @@ const CarrouselCaptions = (props) => {
                         // carrusel se movera al dar clikc al boton
                         data-bs-slide-to={index}
                         //aqui  se indica cuando se presiona el boton a cual diapositiva se movera el carrusel
-                        className={index === 0 ? "active" : ""}
+                        class={index === 0 ? "active" : ""}
                         //asignamos la clave active al primer boton para poder acer el recorrido
                         aria-current={index === 0 ? "true" : undefined}
                         //aqui indicamos que el primer diapositiva es la actual
@@ -33,14 +33,14 @@ const CarrouselCaptions = (props) => {
                     ></button>
                 ))}
             </div>
-            <div className="carousel-inner">
+            <div class="carousel-inner">
                 {slides.map((slide, index) => (
                     <div
                         key={`slide-${index}`}
-                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                        class={`carousel-item ${index === 0 ? "active" : ""}`}
                     >
-                        <img src={slide.imgSrc} className="d-block w-100" alt={slide.imgAlt} />
-                        <div className="carousel-caption d-none d-md-block">
+                        <img src={slide.imgSrc} class="d-block w-100" alt={slide.imgAlt} />
+                        <div class="carousel-caption d-none d-md-block">
                             <h5>{slide.title}</h5>
                             <p>{slide.description}</p>
                         </div>
@@ -48,22 +48,22 @@ const CarrouselCaptions = (props) => {
                 ))}
             </div>
             <button
-                className="carousel-control-prev"
+                class="carousel-control-prev"
                 type="button"
                 data-bs-target={`#${id}`}
                 data-bs-slide="prev"
             >
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button
-                className="carousel-control-next"
+                class="carousel-control-next"
                 type="button"
                 data-bs-target={`#${id}`}
                 data-bs-slide="next"
             >
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
     );

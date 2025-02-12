@@ -3,6 +3,7 @@ import CarrouselCaptions from '../components/CarrouselCaptions';
 import lolImg from "../img/lol.jpg"
 import tronImg from "../img/tronuprising.jpg"
 import gatoImg from "../img/gato.jpg"
+import AlertBadge from '../components/AlertBadge';
 
 const AboutMe = () => {
     const datos = [
@@ -39,12 +40,15 @@ const AboutMe = () => {
 
     return (
         <div style={backgroundstyles}>
-            <div className="text-center pt-4 pb-4">
-                <h1 className="fs-1">Acerca de mi</h1>
+            <div class="text-center pt-4 pb-4">
+                <h1 class="fs-1">Acerca de mi</h1>
             </div>
-            <CarrouselCaptions
+            {datos.length === 0 ? (
+                console.log("Error al obtener la informacion de datos"),
+                <AlertBadge/>
+            ) : (<CarrouselCaptions
                 slides={datos}
-            />
+            />)}
         </div>
     );
 }

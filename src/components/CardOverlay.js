@@ -14,25 +14,25 @@ const CardOverlay = (props) => {
     } = props;
 
     return (
-        <div className={`col-md-4 p-2 ${className}`}>
+        <div class={`col-md-4 p-2 ${className}`}>
             <div
-                className="card bg-dark text-white border-0 rounded-4 shadow-lg"
+                class="card bg-dark text-white border-0 rounded-4 shadow-lg"
                 style={{ height: "100%", ...style }}
             >
                 <img
                     src={imgSrc}
-                    className={`card-img rounded-4 ${imgClassName}`}
+                    class={`card-img rounded-4 ${imgClassName}`}
                     alt={altName}
                     style={{ height: "550px", width: "auto", ...imgStyle }}
                 />
-                <div className="card-img-overlay ">
-                    <h5 className="card-title fw-bold">{cardTitle}</h5>
-                    <p className="card-text">
+                <div class="card-img-overlay ">
+                    <h5 class="card-title fw-bold">{cardTitle}</h5>
+                    <p class="card-text">
                         {cardText1}
                     </p>
                     <Link
                         to={link}
-                        className="stretched-link"
+                        class="stretched-link"
                     ></Link>
                 </div>
             </div>

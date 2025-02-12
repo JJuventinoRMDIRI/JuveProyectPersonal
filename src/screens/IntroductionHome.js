@@ -40,13 +40,14 @@ const IntroductionHome = () => {
       link: "/About-Me",
     },
   ];
+
   return (
     <div style={backgroundstyles}>
-      <div className="row featurette d-flex align-items-center justify-content-center text-center mt-5">
-        <div className="col-md-7">
-          <h2 className="featurette-heading fw-normal lh-1 fs-1">
+      <div class="row featurette d-flex align-items-center justify-content-center text-center mt-5">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1 fs-1">
             Javier Juventino
-            <span className="text-secondary "> Ramos Maldonado</span>
+            <span class="text-secondary "> Ramos Maldonado</span>
           </h2>
           <TypingText
             text={fullText}
@@ -54,17 +55,18 @@ const IntroductionHome = () => {
             className="lead text-center text-shadow fs-4"
           />
         </div>
-        <div className="col-md-5 text-center">
+        <div class="col-md-5 text-center">
           <img
             src={imgJavier}
-            className="img-fluid rounded shadow"
+            class="img-fluid rounded shadow"
             alt="Javier Juventino"
             style={{ width: "100%", maxWidth: "400px", height: "auto" }}
           />
         </div>
       </div>
 
-      <div className="row mt-5 p-5">
+      {cards.length === 0 ? console.log("Error en el arreglo, no contiene informacion") : (
+        <div class="row mt-5 p-5">
         {cards.map((item, index) => (
           <CardOverlay
             key={index}
@@ -75,6 +77,8 @@ const IntroductionHome = () => {
           />
         ))}
       </div>
+      )} 
+      
     </div>
   );
 };

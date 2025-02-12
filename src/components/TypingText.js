@@ -24,7 +24,7 @@ const TypingText = (props) => {
     }, [text, speed]);
 
     return (
-        <p className={className} style={{fontSize: '16px', color: '#000',paddingLeft: 50, ...styles}}>{textDisplaying}</p>
+        <p class={className} style={{fontSize: '16px', color: '#000',paddingLeft: 50, ...styles}}>{textDisplaying}</p>
     );
 }
 

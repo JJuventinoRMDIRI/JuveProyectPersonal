@@ -4,7 +4,7 @@ const CardHorizontal = (props) => {
     const {
         imgSrc,
         imgStyle,
-        imgClassName,
+        imgclass,
         imgAltName = "card",
         cardTitle = "Titulo",
         cardText = "Texto de prueba",
@@ -16,22 +16,22 @@ const CardHorizontal = (props) => {
 
 
     return (
-        <div className="card mb-3 m-5" >
-            <div className="row g-0">
-                {direction === "left" && <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">{cardTitle}</h5>
-                        <p className="card-text">{cardText}</p>
+        <div class="card mb-3 m-5" >
+            <div class="row g-0">
+                {direction === "left" && <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{cardTitle}</h5>
+                        <p class="card-text">{cardText}</p>
                         {content}
                     </div>
                 </div>}
-                <div className="col-md-4 d-flex justify-content-center align-items-center rounded-end">
-                    <img src={imgSrc} style={{ minHeight: '420px', ...imgStyle }} className={`img-fluid rounded-start ${imgClassName}`} alt={imgAltName} />
+                <div class="col-md-4 d-flex justify-content-center align-items-center rounded-end">
+                    <img src={imgSrc} style={{ minHeight: '420px', ...imgStyle }} class={`img-fluid rounded-start ${imgclass}`} alt={imgAltName} />
                 </div>
-                {(direction === "right" || direction === null) && <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">{cardTitle}</h5>
-                        <p className="card-text">{cardText}</p>
+                {(direction === "right" || direction === null) && <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{cardTitle}</h5>
+                        <p class="card-text">{cardText}</p>
                         {content}
                     </div>
                 </div>}

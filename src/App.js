@@ -7,6 +7,7 @@ import AboutMe from './screens/AboutMe';
 import ProfessionalExperience from './screens/ProfessionalExperience';
 import EducationProfile from './screens/EducationProfile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DiriRecargas from './screens/DiriRecargas';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Professional-Experience" element={<ProfessionalExperience/>}/>
         <Route path="/Education-Profile" element={<EducationProfile/>}/>
         <Route path="/" element={<IntroductionHome/>}/>
+        <Route path="/Diri-Recharge" element={<DiriRecargas/>}/>
       </Routes>
     </Router>
   );

@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderComp = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-      <div className="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container">
         <NavLink className="navbar-brand fw-bold" to="/">Mi Página</NavLink>
         <button
-          className="navbar-toggler"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -15,21 +15,25 @@ const HeaderComp = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
 
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/Professional-Experience">Experiencia profesional</NavLink>
+            <li class="nav-item">
+              <NavLink className="nav-link" activeclass="active" to="/Professional-Experience">Experiencia profesional</NavLink>
             </li>
 
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/Education-Profile">Perfil educativo</NavLink>
+            <li class="nav-item">
+              <NavLink className="nav-link" activeclass="active" to="/Education-Profile">Perfil educativo</NavLink>
             </li>
 
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/About-Me">Acerca de Mi</NavLink>
+            <li class="nav-item">
+              <NavLink className="nav-link" activeclass="active" to="/About-Me">Acerca de Mi</NavLink>
+            </li>
+
+            <li class="nav-item">
+              <NavLink className="nav-link" activeclass="active" to="/Diri-Recharge">Diri Recargas</NavLink>
             </li>
 
 

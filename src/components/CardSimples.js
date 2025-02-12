@@ -13,24 +13,24 @@ const CardSimples = (props) => {
   } = props;
 
   return (
-    <div className="card">
-      <div className="card-body">
-        <h3 className="card-title text-center">{cartTitleHeader}</h3>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title text-center">{cartTitleHeader}</h3>
       </div>
-      <div className="d-flex justify-content-center align-items-center pt-4">
+      <div class="d-flex justify-content-center align-items-center pt-4">
         <img
           src={imgSrc}
           style={{ width: "300px", borderRadius: 30 , ...imgStyle}}
-          className="card-img-top shadow-lg"
+          class="card-img-top shadow-lg"
           alt={imgAlt}
         />
       </div>
-      <div className="card-body">
-        <h5 className="card-title">{cardTitle}</h5>
-        <p className="card-text">{cardText}</p>
+      <div class="card-body">
+        <h5 class="card-title">{cardTitle}</h5>
+        <p class="card-text">{cardText}</p>
         {buttonUrl && <a
           href={buttonUrl}
-          className="btn btn-primary d-flex justify-content-center"
+          class="btn btn-primary d-flex justify-content-center"
         >
           {buttonText}
         </a>}
